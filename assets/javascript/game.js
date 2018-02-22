@@ -7,6 +7,7 @@ var totalScore="";
 var wins="";
 var losses="";
 
+
 function randomNum (){
 	totalScore=0;
 	console.log(randomNumber);
@@ -25,17 +26,22 @@ function purpleTotal (){
 }
 	
 	if(totalScore>randomNumber){
-		alert("You lose!");
+		alert("You lose! \nScore = " + totalScore + ". ");
+		losses++;
 		totalScore=0;
-		document.getElementById("losses").innerHTML=+1;
+		document.getElementById("losses").innerHTML=losses;
 		document.getElementById("computerNumber").innerHTML=randomNumber;
-
+		document.getElementById("calculated").innerHTML=0;
+		purple=(Math.floor(Math.random()*50)+1);
 }
 	if(totalScore===randomNumber){
-		alert("You win!");
+		alert("You win! \nScore = " + totalScore + ". ");
+		wins++;
 		totalScore=0;
 		document.getElementById("calculated").innerHTML=0;
-		document.getElementById("wins").innerHTML=(wins+1);
+		document.getElementById("wins").innerHTML=wins;
+		document.getElementById("computerNumber").innerHTML=randomNumber;
+		purple=(Math.floor(Math.random()*50)+1);
 	}
 }
 
@@ -48,16 +54,22 @@ function greenTotal (){
 		document.getElementById("calculated").innerHTML=(totalScore);
 }
 	if(totalScore>randomNumber){
-		alert("You lose!");
+		alert("You lose! \nScore = " + totalScore + ". ");
+		losses++;
 		totalScore=0;
+		document.getElementById("losses").innerHTML=losses;
+		document.getElementById("computerNumber").innerHTML=randomNumber;
 		document.getElementById("calculated").innerHTML=0;
-		document.getElementById("losses").innerHTML=(losses+1);
+		green=(Math.floor(Math.random()*20)+1);
 	}
 	if(totalScore===randomNumber){
-		alert("You win!");
+		alert("You win! \nScore = " + totalScore + ". ");
+		wins++;
 		totalScore=0;
 		document.getElementById("calculated").innerHTML=0;
-		document.getElementById("wins").innerHTML=(wins+1);
+		document.getElementById("wins").innerHTML=wins;
+		document.getElementById("computerNumber").innerHTML=randomNumber;
+		green=(Math.floor(Math.random()*20)+1);
 	}
 }
 
@@ -69,16 +81,22 @@ function blueTotal (){
 		document.getElementById("calculated").innerHTML=(totalScore);
 }
 	if(totalScore>randomNumber){
-		alert("You lose!");
+		alert("You lose! \nScore = " + totalScore + ". ");
+		losses++;
 		totalScore=0;
+		document.getElementById("losses").innerHTML=losses;
+		document.getElementById("computerNumber").innerHTML=randomNumber;
 		document.getElementById("calculated").innerHTML=0;
-		document.getElementById("losses").innerHTML=(losses+1);
+		blue=(Math.floor(Math.random()*30)+1);
 	}
 	if(totalScore===randomNumber){
-		alert("You win!");
+		alert("You win! \nScore = " + totalScore + ". ");
+		wins++;
 		totalScore=0;
 		document.getElementById("calculated").innerHTML=0;
-		document.getElementById("wins").innerHTML=(wins+1);		
+		document.getElementById("wins").innerHTML=wins;
+		document.getElementById("computerNumber").innerHTML=randomNumber;
+		blue=(Math.floor(Math.random()*30)+1);		
 	}
 }
 
@@ -90,20 +108,28 @@ function orangeTotal (){
 		document.getElementById("calculated").innerHTML=(totalScore);
 }
 	if(totalScore>randomNumber){
-		alert("You lose!");
+		alert("You lose! \nScore = " + totalScore + ". ");
+		losses++;
 		totalScore=0;
+		document.getElementById("losses").innerHTML=losses;
+		document.getElementById("computerNumber").innerHTML=randomNumber;
 		document.getElementById("calculated").innerHTML=0;
-		document.getElementById("losses").innerHTML=(losses+1);
+		orange=(Math.floor(Math.random()*40)+1);
+		
 	}
 	if(totalScore===randomNumber){
-		alert("You win!");
+		alert("You win! \nScore = " + totalScore + ". ");
+		wins++;
 		totalScore=0;
 		document.getElementById("calculated").innerHTML=0;
-		document.getElementById("wins").innerHTML=(wins+1);		
+		document.getElementById("wins").innerHTML=wins;		
+		document.getElementById("computerNumber").innerHTML=randomNumber;
+		orange=(Math.floor(Math.random()*40)+1);
 	}
 }
 
 function restart(){
 	location.reload();
+	
 }
 	
