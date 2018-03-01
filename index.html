@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Crystals Collector!</title>
+	<link rel="stylesheet" href="assets/css/reset.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body onload="randomNum()">
+	<div class="wrap">
+		<div class=heading>
+			<h1>Crystals Collector!</h1>
+		</div>
+			
+		<div class="instructions">
+			<p>You will be given a random number at the start of the game.<br/><br/>
+			There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.<br/><br/>
+			You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.<br/><br/>
+			The value of each crystal is hidden from you until you click on it.<br/><br/>
+			Each time when the game starts, the game will change the values of each crystal.</p>
+		</div>
+		
+		<div class="randomNumber-winsLosses">
+			<div class="wins-and-losses">
+				<h5>Wins: <p id="wins"></p> </h5><br/>
+				<h5>Losses: <p id="losses"></p> </h5><br/>
+			</div>
+			
+			<div class="random-number">
+				<h2 id="computerNumber">...</h2>
+			</div>
+		</div>
+		
+		<div class="crystal-group">
+			<div class="crystal1">
+				<button  class="gemButton" id="btn1" onclick="purpleTotal();"><img src="assets/images/purple-gem.png" alt="image of purple gem"/></button>
+			</div>
+			
+			<div class="crystal2">
+				<button class="gemButton" id="btn2" onclick="greenTotal()"><img src="assets/images/green-gem.png" alt="image of green gem"/></button>
+			</div>
+			
+			<div class="crystal3">
+				<button class="gemButton" id="btn3" onclick="blueTotal()"><img src="assets/images/blue-gem.png" alt="image of blue gem"/></button>
+			</div>
+			
+			<div class="crystal4">
+				<button class="gemButton" id="btn4" onclick="orangeTotal()"><img src="assets/images/orange-gem.png" alt="image of orange gem"/></button>
+			</div>
+		</div>
+		
+		<div class="total-score-blank">
+			<h5>Your total score is: </h5>
+		</div>
+		
+		<button id="replay" onclick="restart()"><h3>Reset</h3></button>
+		<div class="calculatedScore">
+			<h2 id="calculated">0</h2>
+		</div>
+	
+
+	</div>
+	<script
+  src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+	<script type="text/javascript" src="assets/javascript/game.js">	</script>
+</body>
+</html>
